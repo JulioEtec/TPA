@@ -1,9 +1,9 @@
 /* 
 Programa:Exercicio 1
-FunÁ„o:Calcular a ·rea de um ret‚ngulo
+Fun√ß√£o:Calcular a √°rea de um ret√¢ngulo
 Autores: Julio Cesar Vicentin Duarte/Marllon Silva Araujo Coelho 
-Data de criaÁ„o: 27/11/2019
-Data de ModificaÁ„o: 30/11/2019
+Data de cria√ß√£o: 27/11/2019
+Data de Modifica√ß√£o: 04/12/2019
 */
 #include <stdio.h>
 #include <windows.h>
@@ -20,30 +20,30 @@ Data de ModificaÁ„o: 30/11/2019
 	int i, i2;
 	printf("+-------------------------------------------------+ \n");
 	printf("| 1. Informar valor do ingresso e tamanho da sala | \n");
-	printf("| 2. Abrir um espet·culo                          | \n");
+	printf("| 2. Abrir um espet√°culo                          | \n");
 	printf("| 3. Reservar ou cancelar a reserva de um lugar   | \n");
 	printf("| 4. Vender um lugar (inteira)                    | \n");
 	printf("| 5. Vender um lugar (meia)                       | \n");
 	printf("| 6. Verificar o mapa do teatro                   | \n");
-	printf("| 7. Encerrar o espet·culo                        | \n");
+	printf("| 7. Encerrar o espet√°culo                        | \n");
 	printf("| 8. Verificar parciais                           | \n");
 	printf("+-------------------------------------------------+ \n");
 	
-	printf("Digite '1' caso deseje iniciar a criaÁ„o de seu espet·culo: \n");
+	printf("Digite '1' caso deseje iniciar a cria√ß√£o de seu espet√°culo: \n");
 	scanf("%i", &inicio);
 	
 	if(inicio == 1){
 	   	
-		printf("VocÍ escolheu uma sala com 500 lugares, deseja cobrar quanto pelo ingresso? \n R$: ");
+		printf("Voc√™ escolheu uma sala com 500 lugares, deseja cobrar quanto pelo ingresso? \n R$: ");
 		scanf("%f", &ingresso);
 		
 		while(ingresso <= 0){
-			printf("Valor inv·lido!! \n");
+			printf("Valor inv√°lido!! \n");
 			printf("Informe outro valor:");
 			scanf("%f", &ingresso);
 		}
 		
-		printf("PreÁo do ingresso definido para R$ %2.f com sucesso \n", ingresso);
+		printf("Pre√ßo do ingresso definido para R$ %2.f com sucesso \n", ingresso);
 		
 		printf("Digite 1 para informar quais lugares foram reservados: \n");
 			scanf("%i", &reserva);
@@ -94,7 +94,7 @@ Data de ModificaÁ„o: 30/11/2019
 			printf("Cadeira:");
 				scanf("%i", &cadeira);
 			while(teatro[fileira][cadeira] == 'R' or teatro[fileira][cadeira] == 'V' or teatro[fileira][cadeira] == 'v'){
-					printf("Esse lugar ja est· reservado, escolha outro \n");
+					printf("Esse lugar ja est√° reservado, escolha outro \n");
 					printf("Fileira:");
 						scanf("%i", &fileira);
 					printf("Cadeira:");
@@ -202,7 +202,7 @@ Data de ModificaÁ„o: 30/11/2019
 
 				
 				while(teatro[fileira][cadeira] == 'R' or teatro[fileira][cadeira] == 'V'){
-					printf("Esse lugar ja est· reservado, escolha outro \n");
+					printf("Esse lugar ja est√° reservado, escolha outro \n");
 					printf("Fileira:");
 						scanf("%i", &fileira);
 					printf("Cadeira:");
@@ -310,7 +310,7 @@ Data de ModificaÁ„o: 30/11/2019
 
 				
 				while(teatro[fileira][cadeira] == 'R' or teatro[fileira][cadeira] == 'V' or teatro[fileira][cadeira] == 'v'){
-					printf("Esse lugar ja est· reservado, escolha outro \n");
+					printf("Esse lugar ja est√° reservado, escolha outro \n");
 					printf("Fileira:");
 						scanf("%i", &fileira);
 					printf("Cadeira:");
@@ -369,7 +369,7 @@ Data de ModificaÁ„o: 30/11/2019
 			printf("|Tecle 1 para cancelar alguma reserva | \n");
 			printf("|Tecle 2 para cancelar alguma venda   | \n");
 			printf("|Tecle 3 para cancelar alguma meia    | \n");
-			printf("|Tecle 4 para encerrar o espet·culo   | \n");
+			printf("|Tecle 4 para encerrar o espet√°culo   | \n");
 			printf("+-------------------------------------+ \n");
 			scanf("%i", &cancela);
 				
@@ -384,7 +384,7 @@ Data de ModificaÁ„o: 30/11/2019
 							teatro[fileira][cadeira] = 'D';
 						}
 					else{
-				printf("Este lugar n„o esta reservado, escolha outra opÁ„o: \n");
+				printf("Este lugar n√£o esta reservado, escolha outra op√ß√£o: \n");
 					scanf("%i", &cancela);
 					}
 		
@@ -402,7 +402,7 @@ Data de ModificaÁ„o: 30/11/2019
 				scanf("%i", &cancela);
 			}
 					else{
-			printf("Este lugar n„o esta vendido, escolha outra opÁ„o: \n");
+			printf("Este lugar n√£o esta vendido, escolha outra op√ß√£o: \n");
 				scanf("%i", &cancela);
 					}	
 				
@@ -418,7 +418,7 @@ Data de ModificaÁ„o: 30/11/2019
 							teatro[fileira][cadeira] = 'D';
 			}
 					else{
-				printf("Este lugar n„o esta vendido como meia, escolha outra opÁ„o: \n");
+				printf("Este lugar n√£o esta vendido como meia, escolha outra op√ß√£o: \n");
 				scanf("%i", &cancela);
 					}	
 					cancela = 0;	
